@@ -1,0 +1,30 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Back to Menu" : {
+
+    },
+    "FOFO Says" : {
+
+    },
+    "Game Over" : {
+
+    },
+    "High Score: %lld Rounds" : {
+
+    },
+    "Play" : {
+
+    },
+    "Play Again" : {
+
+    },
+    "Round" : {
+
+    },
+    "Score: %lld" : {
+
+    }
+  },
+  "version" : "1.0"
+}
