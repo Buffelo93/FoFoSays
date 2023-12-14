@@ -85,15 +85,15 @@
 		738207122B05AA1100BA4D22 /* FoFoSays */ = {
 			isa = PBXGroup;
 			children = (
-				73BD58822B09A41D006114B4 /* LocalStore */,
-				73BD58752B085257006114B4 /* AudioManager */,
-				73BD58682B084F80006114B4 /* Audio Files */,
 				738207132B05AA1100BA4D22 /* FoFoSaysApp.swift */,
+				73BD58872B0D5AA6006114B4 /* Localizable.xcstrings */,
 				73BD58652B0815BF006114B4 /* Assets */,
+				73BD58682B084F80006114B4 /* Audio Files */,
+				73BD58752B085257006114B4 /* AudioManager */,
+				73BD58822B09A41D006114B4 /* LocalStore */,
 				73BD58672B0815EF006114B4 /* Logic */,
 				73BD58662B0815D9006114B4 /* Models */,
 				73BD58642B0815AC006114B4 /* Views */,
-				73BD58872B0D5AA6006114B4 /* Localizable.xcstrings */,
 			);
 			path = FoFoSays;
 			sourceTree = "<group>";
