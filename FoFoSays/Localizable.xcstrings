@@ -1,6 +1,34 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%lld Rounds" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Round"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "new",
+                  "value" : "%lld Rounds"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Rounds"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "Back to Menu" : {
 
     },
@@ -10,7 +38,7 @@
     "Game Over" : {
 
     },
-    "High Score: %lld Rounds" : {
+    "High Score:" : {
 
     },
     "Play" : {

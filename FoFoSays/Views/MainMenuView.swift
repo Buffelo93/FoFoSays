@@ -21,7 +21,9 @@ struct MainMenuView: View {
                     Spacer()
                     Text("FOFO Says")
                         .font(.largeTitle)
-                    Text("High Score: \(gameLogic.highScore) Rounds")
+                        .padding()
+                    Text("High Score:")
+                    Text("\(gameLogic.highScore) Rounds")
                     Spacer()
                     Button("Play") {
                         withAnimation(animation) {
