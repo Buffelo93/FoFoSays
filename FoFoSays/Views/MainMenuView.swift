@@ -11,11 +11,12 @@ struct MainMenuView: View {
     
     @EnvironmentObject var gameLogic: GameLogic
     @Binding var showGameView: Bool
+    @Binding var showColorSheet: Bool
     let animation = Animation.easeInOut(duration: 0.5)
     
     var body: some View {
         ZStack {
-                MainMenuBackgroundView()
+            MainMenuBackgroundView(colors: gameLogic.currentColorScheme)
                     .edgesIgnoringSafeArea(.all)
                 VStack {
                     Spacer()
@@ -32,6 +33,10 @@ struct MainMenuView: View {
                     }
                     .buttonStyle(.automatic)
                     .font(.system(size: 46.0))
+                    Button("Color Scheme") {
+                        showColorSheet = true
+                    }
+                    .padding()
                     Button {
                         gameLogic.toggleSound()
                     } label: {
@@ -56,19 +61,20 @@ struct MainMenuView: View {
 }
 
 #Preview {
-    MainMenuView(showGameView: .constant(false))
+    MainMenuView(showGameView: .constant(false), showColorSheet: .constant(false))
         .environmentObject(GameLogic())
 }
 
 struct MainMenuBackgroundView: View {
     
     @State private var startAnimation: Bool = false
+    var colors: [Color]
     
     var body: some View {
         // Animated background using ZStack and LinearGradient
         ZStack {
             LinearGradient(
-                colors: [.red, .blue, .yellow, .green],
+                colors: colors,
                 startPoint: startAnimation ? .topLeading : .bottomLeading,
                 endPoint: startAnimation ? .bottomTrailing : .topTrailing
             )

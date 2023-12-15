@@ -15,7 +15,7 @@ struct GameOverView: View {
     
     var body: some View {
         ZStack {
-            GameOverBackgroundView()
+            GameOverBackgroundView(colors: gameLogic.currentColorScheme)
             VStack {
                 Spacer()
                 Text("Game Over")
@@ -58,10 +58,11 @@ struct GameOverView: View {
 struct GameOverBackgroundView: View {
     
     @State private var startAnimation: Bool = false
+    var colors: [Color]
     
     var body: some View {
         ZStack {
-            RadialGradient(gradient: Gradient(colors: [.blue, .yellow, .green, .red,]), center: .center, startRadius: startAnimation ? 0 : 250, endRadius: startAnimation ? 250 : 1000)
+            RadialGradient(gradient: Gradient(colors: colors), center: .center, startRadius: startAnimation ? 0 : 250, endRadius: startAnimation ? 250 : 1000)
             .onAppear {
                 withAnimation(.linear(duration: 5.0).repeatForever()) {
                     startAnimation.toggle()

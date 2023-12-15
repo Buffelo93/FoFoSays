@@ -10,5 +10,6 @@ import Foundation
 enum UserDefaultKeys: String {
     case notFirstLaunch
     case highScore
+    case savedColorSchemeIndex
     case soundIsOn
 }

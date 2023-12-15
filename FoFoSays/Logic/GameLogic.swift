@@ -22,8 +22,13 @@ final class GameLogic: ObservableObject {
     private var savedIndex: Int = 0
     private let audioManager: AudioManager = AudioManager()
     private let userDefaultsManager: UserDefaultsManager = UserDefaultsManager()
+    private let colorSchemeDataSource: ColorSchemeDataSource = ColorSchemeDataSource()
     private let transitionAnimation = Animation.easeInOut(duration: 0.5)
     
+    @Published var currentColorScheme: [Color]
+    @Published var gameRound: Int = 1
+    @Published var highScore: Int
+    @Published var soundIsOn: Bool
     @Published var playerCanTap: Bool = true
     @Published var textIsRed: Bool = false
     @Published var isGameOver: Bool = false {
@@ -35,12 +40,10 @@ final class GameLogic: ObservableObject {
             }
         }
     }
-    @Published var gameRound: Int = 1
-    @Published var highScore: Int
-    @Published var soundIsOn: Bool
     
     init() {
         self.highScore = userDefaultsManager.getIntWith(key: .highScore)
+        self.currentColorScheme = colorSchemeDataSource.colorData[userDefaultsManager.getIntWith(key: .savedColorSchemeIndex)].colors
         if userDefaultsManager.getBoolWith(key: .notFirstLaunch) {
             self.soundIsOn = userDefaultsManager.getBoolWith(key: .soundIsOn)
         } else {
@@ -52,6 +55,7 @@ final class GameLogic: ObservableObject {
         if !soundIsOn {
             audioManager.muteVolumeFor(audioFile: .drive)
         }
+        setGameColorScheme(colors: currentColorScheme)
     }
     
     func startGame() {
@@ -116,6 +120,15 @@ final class GameLogic: ObservableObject {
         if soundIsOn {
             audioManager.unMuteVolumeFor(audioFile: .drive)
         }
+    }
+    
+    func setGameColorScheme(colors: [Color]) {
+        var newTiles: [GameTile] = []
+        for color in colors {
+            newTiles.append(GameTile(color: color, isPressed: false))
+        }
+        tiles = newTiles
+        currentColorScheme = colors
     }
     
 }
