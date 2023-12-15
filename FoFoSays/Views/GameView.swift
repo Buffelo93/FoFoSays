@@ -25,6 +25,7 @@ struct GameView: View {
         }
         .allowsHitTesting(gameLogic.playerCanTap)
     }
+    
 }
 
 #Preview {
@@ -60,6 +61,7 @@ struct TilesView: View {
             }
         }
     }
+    
 }
 
 struct RoundDisplayView: View {
@@ -84,7 +86,6 @@ struct RoundDisplayView: View {
                     .font(.largeTitle)
                     .foregroundStyle(textColor)
             }
-            
         }
     }
     

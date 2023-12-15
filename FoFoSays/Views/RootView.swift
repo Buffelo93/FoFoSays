@@ -11,7 +11,7 @@ struct RootView: View {
     
     @EnvironmentObject var gameLogic: GameLogic
     @State private var showGameView = false
-    @State private var showColorSheet: Bool = false
+    @State private var showColorSheet = false
     
     var body: some View {
         ZStack {
@@ -28,6 +28,7 @@ struct RootView: View {
                  .presentationBackground(.thinMaterial)
         }
     }
+    
 }
 
 #Preview {

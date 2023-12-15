@@ -12,7 +12,6 @@ struct MainMenuView: View {
     @EnvironmentObject var gameLogic: GameLogic
     @Binding var showGameView: Bool
     @Binding var showColorSheet: Bool
-    let animation = Animation.easeInOut(duration: 0.5)
     
     var body: some View {
         ZStack {
@@ -27,7 +26,7 @@ struct MainMenuView: View {
                     Text("\(gameLogic.highScore) Rounds")
                     Spacer()
                     Button("Play") {
-                        withAnimation(animation) {
+                        withAnimation(Animation.easeInOut(duration: 0.5)) {
                             showGameView = true
                         }
                     }
@@ -71,14 +70,12 @@ struct MainMenuBackgroundView: View {
     var colors: [Color]
     
     var body: some View {
-        // Animated background using ZStack and LinearGradient
         ZStack {
             LinearGradient(
                 colors: colors,
                 startPoint: startAnimation ? .topLeading : .bottomLeading,
                 endPoint: startAnimation ? .bottomTrailing : .topTrailing
             )
-            // Animation to toggle the gradient colors
             .onAppear {
                 withAnimation(.linear(duration: 5.0).repeatForever()) {
                     startAnimation.toggle()

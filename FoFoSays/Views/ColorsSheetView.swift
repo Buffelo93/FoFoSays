@@ -11,25 +11,25 @@ struct ColorsSheetView: View {
     
     @ObservedObject var colorsSheetViewModel: ColorsSheetViewModel
     
-    let data = (1...10).map { "Item \($0)" }
-    
     let columns = [
         GridItem(.flexible()),
-        GridItem(.flexible()),
+        GridItem(.flexible())
     ]
     
     var body: some View {
-        LazyVGrid(columns: columns, spacing: 20) {
-            ForEach(colorsSheetViewModel.colorSchemeData, id: \.title) { colorScheme in
-                Button {
-                    colorsSheetViewModel.selectedColorScheme(index: colorScheme.index)
-                } label: {
-                    ColorSelectionsView(colors: colorScheme.colors, colorSchemeTitle: colorScheme.title, isSelect: colorScheme.isSelected)
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(colorsSheetViewModel.colorSchemeData, id: \.title) { colorScheme in
+                    Button {
+                        colorsSheetViewModel.selectedColorScheme(index: colorScheme.index)
+                    } label: {
+                        ColorSelectionsView(colors: colorScheme.colors, colorSchemeTitle: colorScheme.title, isSelect: colorScheme.isSelected)
+                    }
                 }
             }
+            .padding()
+            Spacer()
         }
-        .padding()
-        Spacer()
     }
 }
 
@@ -39,9 +39,6 @@ struct ColorsSheetView: View {
 
 struct ColorSelectionsView: View {
     
-    // Four squares in a row, selectable, Outlined and cover if selected
-    // Color scheme Title
-    // [] [] [] []
     let colors: [Color]
     let colorSchemeTitle: String
     private let aspectRatio = 1.0
@@ -87,4 +84,5 @@ struct ColorSelectionsView: View {
             }
         }
     }
+    
 }

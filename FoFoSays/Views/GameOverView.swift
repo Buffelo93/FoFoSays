@@ -58,7 +58,7 @@ struct GameOverView: View {
 struct GameOverBackgroundView: View {
     
     @State private var startAnimation: Bool = false
-    var colors: [Color]
+    private(set) var colors: [Color]
     
     var body: some View {
         ZStack {
