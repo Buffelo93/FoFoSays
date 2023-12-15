@@ -16,8 +16,3 @@ enum AudioFile: String, CaseIterable {
     case tileSound4
     case incorrect
 }
-
-enum MusicControls {
-    case play
-    case stop
-}
