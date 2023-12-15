@@ -29,10 +29,17 @@ final class GameLogic: ObservableObject {
     @Published var isGameOver: Bool = false
     @Published var gameRound: Int = 1
     @Published var highScore: Int
-    @Published var soundIsOn: Bool = true
+    @Published var soundIsOn: Bool
     
     init() {
-        self.highScore = userDefaultsManager.getIntWith(key: .highScore) ?? 0
+        self.highScore = userDefaultsManager.getIntWith(key: .highScore)
+        if userDefaultsManager.getBoolWith(key: .notFirstLaunch) {
+            self.soundIsOn = userDefaultsManager.getBoolWith(key: .soundIsOn)
+        } else {
+            self.soundIsOn = true
+            userDefaultsManager.set(bool: true, key: .notFirstLaunch)
+        }
+        audioManager.soundIsOn = soundIsOn
     }
     
     func startGame() {
@@ -81,6 +88,7 @@ final class GameLogic: ObservableObject {
     func toggleSound() {
         soundIsOn.toggle()
         audioManager.soundIsOn = soundIsOn
+        userDefaultsManager.set(bool: soundIsOn, key: .soundIsOn)
     }
     
 }
@@ -105,7 +113,7 @@ private extension GameLogic {
     
     func updateHighScore() {
         if gameRound-1 > highScore {
-            userDefaultsManager.add(integer: gameRound-1, key: .highScore)
+            userDefaultsManager.set(integer: gameRound-1, key: .highScore)
             highScore = gameRound-1
         }
     }

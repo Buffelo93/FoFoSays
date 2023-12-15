@@ -11,13 +11,20 @@ final class UserDefaultsManager {
     
     let storage: UserDefaults = UserDefaults.standard
     
-    func add(integer: Int, key: UserDefaultKeys) {
-        storage.setValue(integer, forKey: key.rawValue)
+    func set(integer: Int, key: UserDefaultKeys) {
+        storage.set(integer, forKey: key.rawValue)
     }
     
-    func getIntWith(key: UserDefaultKeys) -> Int? {
-        let new = storage.value(forKey: key.rawValue) as? Int
-        return new
+    func getIntWith(key: UserDefaultKeys) -> Int {
+        storage.integer(forKey: key.rawValue)
+    }
+    
+    func set(bool: Bool, key: UserDefaultKeys) {
+        storage.set(bool, forKey: key.rawValue)
+    }
+    
+    func getBoolWith(key: UserDefaultKeys) -> Bool {
+        storage.bool(forKey: key.rawValue)
     }
     
 }
