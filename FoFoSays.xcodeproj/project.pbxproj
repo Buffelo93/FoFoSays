@@ -17,6 +17,8 @@
 		73A465552B07E2880084FCDC /* GameTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A465542B07E2880084FCDC /* GameTile.swift */; };
 		73A9A2462B2A9D8200DF32BD /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A9A2452B2A9D8200DF32BD /* GameOverView.swift */; };
 		73A9A24E2B2B4BCC00DF32BD /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A9A24D2B2B4BCC00DF32BD /* RootView.swift */; };
+		73AA54B52B2BED8500277C5D /* drive.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 73AA54B42B2BED8400277C5D /* drive.mp3 */; };
+		73AA54B72B2BF8BE00277C5D /* gameOver.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 73AA54B62B2BF8BE00277C5D /* gameOver.mp3 */; };
 		73BD586A2B084FA5006114B4 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BD58692B084FA5006114B4 /* AudioManager.swift */; };
 		73BD58772B08527F006114B4 /* AudioFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BD58762B08527F006114B4 /* AudioFile.swift */; };
 		73BD587C2B08614D006114B4 /* tileSound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 73BD58782B08614C006114B4 /* tileSound1.mp3 */; };
@@ -42,6 +44,8 @@
 		73A465542B07E2880084FCDC /* GameTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTile.swift; sourceTree = "<group>"; };
 		73A9A2452B2A9D8200DF32BD /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		73A9A24D2B2B4BCC00DF32BD /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		73AA54B42B2BED8400277C5D /* drive.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drive.mp3; sourceTree = "<group>"; };
+		73AA54B62B2BF8BE00277C5D /* gameOver.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameOver.mp3; sourceTree = "<group>"; };
 		73BD58692B084FA5006114B4 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		73BD58762B08527F006114B4 /* AudioFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFile.swift; sourceTree = "<group>"; };
 		73BD58782B08614C006114B4 /* tileSound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tileSound1.mp3; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 		73BD58682B084F80006114B4 /* Audio Files */ = {
 			isa = PBXGroup;
 			children = (
+				73AA54B42B2BED8400277C5D /* drive.mp3 */,
+				73AA54B62B2BF8BE00277C5D /* gameOver.mp3 */,
 				73BD58802B08627F006114B4 /* incorrect.mp3 */,
 				73BD58782B08614C006114B4 /* tileSound1.mp3 */,
 				73BD587B2B08614D006114B4 /* tileSound2.mp3 */,
@@ -232,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73AA54B72B2BF8BE00277C5D /* gameOver.mp3 in Resources */,
 				73BD587C2B08614D006114B4 /* tileSound1.mp3 in Resources */,
 				73BD587D2B08614D006114B4 /* tileSound3.mp3 in Resources */,
 				73BD58882B0D5AA6006114B4 /* Localizable.xcstrings in Resources */,
@@ -239,6 +246,7 @@
 				73BD587F2B08614D006114B4 /* tileSound2.mp3 in Resources */,
 				73BD58812B08627F006114B4 /* incorrect.mp3 in Resources */,
 				7382071A2B05AA1200BA4D22 /* Assets.xcassets in Resources */,
+				73AA54B52B2BED8500277C5D /* drive.mp3 in Resources */,
 				73BD587E2B08614D006114B4 /* tileSound4.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

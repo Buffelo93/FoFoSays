@@ -24,6 +24,25 @@ final class AudioManager {
         audioPlayer.play()
     }
     
+    // TODO: Remove stop if I'm not being used anywhere later
+    func stop(audioFile: AudioFile) {
+        guard let audioPlayer = audioPlayerDict[audioFile], soundIsOn else { return }
+        audioPlayer.setVolume(0.0, fadeDuration: 0.25)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            audioPlayer.stop()
+        }
+    }
+    
+    func muteVolumeFor(audioFile: AudioFile) {
+        guard let audioPlayer = audioPlayerDict[audioFile] else { return }
+        audioPlayer.setVolume(0.0, fadeDuration: 0.25)
+    }
+    
+    func unMuteVolumeFor(audioFile: AudioFile) {
+        guard let audioPlayer = audioPlayerDict[audioFile] else { return }
+        audioPlayer.setVolume(1.0, fadeDuration: 0.75)
+    }
+    
     func playTileSoundBy(index: Int) {
         switch index {
         case 0:
@@ -37,6 +56,13 @@ final class AudioManager {
         default:
             break
         }
+    }
+    
+    func loopMusic(for audioFile: AudioFile) {
+        guard let audioPlayer = audioPlayerDict[audioFile] else { return }
+        audioPlayer.numberOfLoops =  -1
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
     }
     
     private func populateAudioPlayerDict(audioFile: AudioFile) {

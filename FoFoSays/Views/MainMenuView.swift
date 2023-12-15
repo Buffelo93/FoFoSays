@@ -19,8 +19,8 @@ struct MainMenuView: View {
                     .edgesIgnoringSafeArea(.all)
                 VStack {
                     Spacer()
-                    Text("FOFO Says")
-                        .font(.largeTitle)
+                    Text("FoFo Says")
+                        .font(.system(size: 54.0))
                         .padding()
                     Text("High Score:")
                     Text("\(gameLogic.highScore) Rounds")
@@ -31,7 +31,7 @@ struct MainMenuView: View {
                         }
                     }
                     .buttonStyle(.automatic)
-                    .font(.largeTitle)
+                    .font(.system(size: 46.0))
                     Button {
                         gameLogic.toggleSound()
                     } label: {
@@ -49,7 +49,7 @@ struct MainMenuView: View {
                 }
         }
         .font(.title)
-        .fontWeight(.light)
+        .fontWeight(.ultraLight)
         .foregroundStyle(.black)
     }
     

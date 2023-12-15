@@ -9,6 +9,7 @@ import Foundation
 
 enum UserDefaultKeys: String {
     case notFirstLaunch
+    case notFirstGameOver
     case highScore
     case soundIsOn
 }

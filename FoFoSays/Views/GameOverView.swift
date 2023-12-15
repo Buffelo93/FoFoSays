@@ -19,6 +19,8 @@ struct GameOverView: View {
             VStack {
                 Spacer()
                 Text("Game Over")
+                    .font(.system(size: 54.0))
+                    .padding()
                 Text("Score: \(gameLogic.gameRound)")
                 Button("Play Again") {
                     withAnimation(animation) {
@@ -34,6 +36,7 @@ struct GameOverView: View {
                     showGameView = false
                     withAnimation(animation) {
                         gameLogic.resetGame()
+                        gameLogic.playMainMenuMusic()
                     }
                 }
                 .buttonStyle(.automatic)
@@ -42,7 +45,7 @@ struct GameOverView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .font(.largeTitle)
-        .fontWeight(.light)
+        .fontWeight(.ultraLight)
         .foregroundStyle(.black)
     }
 }

@@ -26,7 +26,15 @@ final class GameLogic: ObservableObject {
     
     @Published var playerCanTap: Bool = true
     @Published var textIsRed: Bool = false
-    @Published var isGameOver: Bool = false
+    @Published var isGameOver: Bool = false {
+        didSet {
+            if isGameOver, soundIsOn {
+                audioManager.unMuteVolumeFor(audioFile: .gameOver)
+            } else {
+                audioManager.muteVolumeFor(audioFile: .gameOver)
+            }
+        }
+    }
     @Published var gameRound: Int = 1
     @Published var highScore: Int
     @Published var soundIsOn: Bool
@@ -40,13 +48,20 @@ final class GameLogic: ObservableObject {
             userDefaultsManager.set(bool: true, key: .notFirstLaunch)
         }
         audioManager.soundIsOn = soundIsOn
+        audioManager.loopMusic(for: .drive)
+        if !soundIsOn {
+            audioManager.muteVolumeFor(audioFile: .drive)
+        }
     }
     
     func startGame() {
-        let randomInt = Int.random(in: 0..<4)
-        moveOrder.append(randomInt)
-        flashAnimation(with: randomInt)
-        audioManager.playTileSoundBy(index: randomInt)
+        audioManager.muteVolumeFor(audioFile: .drive)
+        wait(time: 0.5) {
+            let randomInt = Int.random(in: 0..<4)
+            self.moveOrder.append(randomInt)
+            self.flashAnimation(with: randomInt)
+            self.audioManager.playTileSoundBy(index: randomInt)
+        }
     }
     
     func resetGame() {
@@ -80,6 +95,7 @@ final class GameLogic: ObservableObject {
                 withAnimation(self.transitionAnimation) {
                     self.isGameOver = true
                 }
+                self.audioManager.loopMusic(for: .gameOver)
                 self.playerCanTap.toggle()
             }
         }
@@ -89,6 +105,17 @@ final class GameLogic: ObservableObject {
         soundIsOn.toggle()
         audioManager.soundIsOn = soundIsOn
         userDefaultsManager.set(bool: soundIsOn, key: .soundIsOn)
+        if soundIsOn {
+            audioManager.unMuteVolumeFor(audioFile: .drive)
+        } else {
+            audioManager.muteVolumeFor(audioFile: .drive)
+        }
+    }
+    
+    func playMainMenuMusic() {
+        if soundIsOn {
+            audioManager.unMuteVolumeFor(audioFile: .drive)
+        }
     }
     
 }
