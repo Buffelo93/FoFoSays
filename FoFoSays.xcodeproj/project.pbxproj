@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		731E84412B2D1760001E2BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 731E84402B2D1760001E2BF7 /* Assets.xcassets */; };
 		738207142B05AA1100BA4D22 /* FoFoSaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738207132B05AA1100BA4D22 /* FoFoSaysApp.swift */; };
 		738207162B05AA1100BA4D22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738207152B05AA1100BA4D22 /* ContentView.swift */; };
-		7382071A2B05AA1200BA4D22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738207192B05AA1200BA4D22 /* Assets.xcassets */; };
 		7382071D2B05AA1200BA4D22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7382071C2B05AA1200BA4D22 /* Preview Assets.xcassets */; };
 		738207242B05AB2F00BA4D22 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738207232B05AB2F00BA4D22 /* GameView.swift */; };
 		738207262B05AB7100BA4D22 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738207252B05AB7100BA4D22 /* TileView.swift */; };
@@ -38,10 +38,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		731E84402B2D1760001E2BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FoFoSays/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		731E84422B2D186B001E2BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		738207102B05AA1100BA4D22 /* FoFoSays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoFoSays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		738207132B05AA1100BA4D22 /* FoFoSaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoFoSaysApp.swift; sourceTree = "<group>"; };
 		738207152B05AA1100BA4D22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		738207192B05AA1200BA4D22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7382071C2B05AA1200BA4D22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		738207232B05AB2F00BA4D22 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		738207252B05AB7100BA4D22 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 		738207122B05AA1100BA4D22 /* FoFoSays */ = {
 			isa = PBXGroup;
 			children = (
+				731E84422B2D186B001E2BF7 /* Info.plist */,
 				738207132B05AA1100BA4D22 /* FoFoSaysApp.swift */,
 				73BD58872B0D5AA6006114B4 /* Localizable.xcstrings */,
 				73BD58652B0815BF006114B4 /* Assets */,
@@ -155,7 +157,7 @@
 		73BD58652B0815BF006114B4 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				738207192B05AA1200BA4D22 /* Assets.xcassets */,
+				731E84402B2D1760001E2BF7 /* Assets.xcassets */,
 				7382071B2B05AA1200BA4D22 /* Preview Content */,
 			);
 			path = Assets;
@@ -271,12 +273,12 @@
 			files = (
 				73AA54B72B2BF8BE00277C5D /* gameOver.mp3 in Resources */,
 				73BD587C2B08614D006114B4 /* tileSound1.mp3 in Resources */,
+				731E84412B2D1760001E2BF7 /* Assets.xcassets in Resources */,
 				73BD587D2B08614D006114B4 /* tileSound3.mp3 in Resources */,
 				73BD58882B0D5AA6006114B4 /* Localizable.xcstrings in Resources */,
 				7382071D2B05AA1200BA4D22 /* Preview Assets.xcassets in Resources */,
 				73BD587F2B08614D006114B4 /* tileSound2.mp3 in Resources */,
 				73BD58812B08627F006114B4 /* incorrect.mp3 in Resources */,
-				7382071A2B05AA1200BA4D22 /* Assets.xcassets in Resources */,
 				73AA54B52B2BED8500277C5D /* drive.mp3 in Resources */,
 				73BD587E2B08614D006114B4 /* tileSound4.mp3 in Resources */,
 			);
@@ -443,10 +445,10 @@
 				DEVELOPMENT_TEAM = L6L8JRV5TU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoFoSays/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.educational-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -476,10 +478,10 @@
 				DEVELOPMENT_TEAM = L6L8JRV5TU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoFoSays/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.educational-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
