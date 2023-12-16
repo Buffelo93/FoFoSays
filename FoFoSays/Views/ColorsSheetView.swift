@@ -10,6 +10,7 @@ import SwiftUI
 struct ColorsSheetView: View {
     
     @ObservedObject var colorsSheetViewModel: ColorsSheetViewModel
+    @Environment(\.dismiss) var dismiss
     
     let columns = [
         GridItem(.flexible()),
@@ -22,6 +23,7 @@ struct ColorsSheetView: View {
                 ForEach(colorsSheetViewModel.colorSchemeData, id: \.title) { colorScheme in
                     Button {
                         colorsSheetViewModel.selectedColorScheme(index: colorScheme.index)
+                        dismiss()
                     } label: {
                         ColorSelectionsView(colors: colorScheme.colors, colorSchemeTitle: colorScheme.title, isSelect: colorScheme.isSelected)
                     }
