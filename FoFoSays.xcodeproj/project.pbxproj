@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		731E84412B2D1760001E2BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 731E84402B2D1760001E2BF7 /* Assets.xcassets */; };
+		731E84442B2D324D001E2BF7 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E84432B2D324D001E2BF7 /* SplashView.swift */; };
 		738207142B05AA1100BA4D22 /* FoFoSaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738207132B05AA1100BA4D22 /* FoFoSaysApp.swift */; };
 		738207162B05AA1100BA4D22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738207152B05AA1100BA4D22 /* ContentView.swift */; };
 		7382071D2B05AA1200BA4D22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7382071C2B05AA1200BA4D22 /* Preview Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		731E84402B2D1760001E2BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FoFoSays/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		731E84422B2D186B001E2BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		731E84432B2D324D001E2BF7 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		738207102B05AA1100BA4D22 /* FoFoSays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoFoSays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		738207132B05AA1100BA4D22 /* FoFoSaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoFoSaysApp.swift; sourceTree = "<group>"; };
 		738207152B05AA1100BA4D22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				738207232B05AB2F00BA4D22 /* GameView.swift */,
 				73BD58892B0D5B06006114B4 /* MainMenuView.swift */,
 				73A9A24D2B2B4BCC00DF32BD /* RootView.swift */,
+				731E84432B2D324D001E2BF7 /* SplashView.swift */,
 				738207252B05AB7100BA4D22 /* TileView.swift */,
 			);
 			path = Views;
@@ -293,6 +296,7 @@
 			files = (
 				73A9A2462B2A9D8200DF32BD /* GameOverView.swift in Sources */,
 				73AA54C32B2CA78D00277C5D /* Color+.swift in Sources */,
+				731E84442B2D324D001E2BF7 /* SplashView.swift in Sources */,
 				73AA54B92B2C02CD00277C5D /* ColorsSheetView.swift in Sources */,
 				73BD58862B09A7B3006114B4 /* UserDefaultKeys.swift in Sources */,
 				73BD588A2B0D5B06006114B4 /* MainMenuView.swift in Sources */,

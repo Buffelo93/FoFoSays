@@ -12,7 +12,7 @@ struct FoFoSaysApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
         }
     }
 }

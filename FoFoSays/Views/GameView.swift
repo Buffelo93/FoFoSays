@@ -38,8 +38,8 @@ struct TilesView: View {
     @ObservedObject var gameLogic: GameLogic
     
     var body: some View {
-        VStack() {
-            HStack() {
+        VStack(spacing: 1) {
+            HStack(spacing: 1) {
                 TileView(gameTile: gameLogic.tiles[0])
                     .onTapGesture {
                         gameLogic.tilePressed(index: 0)
@@ -49,7 +49,7 @@ struct TilesView: View {
                         gameLogic.tilePressed(index: 1)
                     }
             }
-            HStack() {
+            HStack(spacing: 1) {
                 TileView(gameTile: gameLogic.tiles[2])
                     .onTapGesture {
                         gameLogic.tilePressed(index: 2)
@@ -77,15 +77,14 @@ struct RoundDisplayView: View {
         ZStack {
             Circle()
                 .fill(.black)
-                .frame(width: 150, height: 150, alignment: .center)
+                .frame(width: 125, height: 125, alignment: .center)
             VStack {
                 Text("Round")
-                    .font(.largeTitle)
-                    .foregroundStyle(textColor)
                 Text(String(roundCount))
-                    .font(.largeTitle)
-                    .foregroundStyle(textColor)
             }
+            .font(.largeTitle)
+            .fontWeight(.ultraLight)
+            .foregroundStyle(textColor)
         }
     }
     
