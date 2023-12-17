@@ -22,7 +22,6 @@ final class GameLogic: ObservableObject {
     private var savedIndex: Int = 0
     private let audioManager: AudioManager = AudioManager()
     private let userDefaultsManager: UserDefaultsManager = UserDefaultsManager()
-    private let colorSchemeDataSource: ColorSchemeDataSource = ColorSchemeDataSource()
     private let transitionAnimation = Animation.easeInOut(duration: 0.5)
     
     @Published var currentColorScheme: [Color]
@@ -43,7 +42,7 @@ final class GameLogic: ObservableObject {
     
     init() {
         self.highScore = userDefaultsManager.getIntWith(key: .highScore)
-        self.currentColorScheme = colorSchemeDataSource.colorData[userDefaultsManager.getIntWith(key: .savedColorSchemeIndex)].colors
+        self.currentColorScheme = colorSchemeData[userDefaultsManager.getIntWith(key: .savedColorSchemeIndex)].colors
         if userDefaultsManager.getBoolWith(key: .notFirstLaunch) {
             self.soundIsOn = userDefaultsManager.getBoolWith(key: .soundIsOn)
         } else {

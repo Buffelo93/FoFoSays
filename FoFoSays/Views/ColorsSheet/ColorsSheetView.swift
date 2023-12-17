@@ -20,7 +20,7 @@ struct ColorsSheetView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(colorsSheetViewModel.colorSchemeData, id: \.title) { colorScheme in
+                ForEach(colorsSheetViewModel.colorSchemes, id: \.title) { colorScheme in
                     Button {
                         colorsSheetViewModel.selectedColorScheme(index: colorScheme.index)
                         dismiss()

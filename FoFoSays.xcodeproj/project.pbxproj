@@ -23,7 +23,7 @@
 		73AA54B92B2C02CD00277C5D /* ColorsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AA54B82B2C02CD00277C5D /* ColorsSheetView.swift */; };
 		73AA54BC2B2CA00800277C5D /* ColorsSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AA54BB2B2CA00800277C5D /* ColorsSheetViewModel.swift */; };
 		73AA54BE2B2CA0B700277C5D /* ColorSchemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AA54BD2B2CA0B700277C5D /* ColorSchemeModel.swift */; };
-		73AA54C02B2CA16200277C5D /* ColorSchemeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AA54BF2B2CA16200277C5D /* ColorSchemeDataSource.swift */; };
+		73AA54C02B2CA16200277C5D /* ColorSchemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AA54BF2B2CA16200277C5D /* ColorSchemeData.swift */; };
 		73AA54C32B2CA78D00277C5D /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AA54C22B2CA78D00277C5D /* Color+.swift */; };
 		73BD586A2B084FA5006114B4 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BD58692B084FA5006114B4 /* AudioManager.swift */; };
 		73BD58772B08527F006114B4 /* AudioFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BD58762B08527F006114B4 /* AudioFile.swift */; };
@@ -57,7 +57,7 @@
 		73AA54B82B2C02CD00277C5D /* ColorsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsSheetView.swift; sourceTree = "<group>"; };
 		73AA54BB2B2CA00800277C5D /* ColorsSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsSheetViewModel.swift; sourceTree = "<group>"; };
 		73AA54BD2B2CA0B700277C5D /* ColorSchemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeModel.swift; sourceTree = "<group>"; };
-		73AA54BF2B2CA16200277C5D /* ColorSchemeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeDataSource.swift; sourceTree = "<group>"; };
+		73AA54BF2B2CA16200277C5D /* ColorSchemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeData.swift; sourceTree = "<group>"; };
 		73AA54C22B2CA78D00277C5D /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		73BD58692B084FA5006114B4 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		73BD58762B08527F006114B4 /* AudioFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFile.swift; sourceTree = "<group>"; };
@@ -83,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		731E84602B2EACC4001E2BF7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				73AA54BF2B2CA16200277C5D /* ColorSchemeData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		738207072B05AA1100BA4D22 = {
 			isa = PBXGroup;
 			children = (
@@ -106,13 +114,12 @@
 				738207132B05AA1100BA4D22 /* FoFoSaysApp.swift */,
 				73BD58872B0D5AA6006114B4 /* Localizable.xcstrings */,
 				73BD58652B0815BF006114B4 /* Assets */,
-				73BD58682B084F80006114B4 /* Audio Files */,
-				73BD58752B085257006114B4 /* AudioManager */,
+				73BD58752B085257006114B4 /* Audio */,
+				731E84602B2EACC4001E2BF7 /* Data */,
 				73AA54C12B2CA73A00277C5D /* Extensions */,
-				73BD58822B09A41D006114B4 /* LocalStore */,
+				73BD58822B09A41D006114B4 /* LocalStorage */,
 				73BD58672B0815EF006114B4 /* Logic */,
 				73BD58662B0815D9006114B4 /* Models */,
-				73AA54BA2B2C9FEE00277C5D /* ViewModels */,
 				73BD58642B0815AC006114B4 /* Views */,
 			);
 			path = FoFoSays;
@@ -126,12 +133,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		73AA54BA2B2C9FEE00277C5D /* ViewModels */ = {
+		73AA54BA2B2C9FEE00277C5D /* ColorsSheet */ = {
 			isa = PBXGroup;
 			children = (
+				73AA54B82B2C02CD00277C5D /* ColorsSheetView.swift */,
 				73AA54BB2B2CA00800277C5D /* ColorsSheetViewModel.swift */,
 			);
-			path = ViewModels;
+			path = ColorsSheet;
 			sourceTree = "<group>";
 		};
 		73AA54C12B2CA73A00277C5D /* Extensions */ = {
@@ -145,7 +153,7 @@
 		73BD58642B0815AC006114B4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				73AA54B82B2C02CD00277C5D /* ColorsSheetView.swift */,
+				73AA54BA2B2C9FEE00277C5D /* ColorsSheet */,
 				738207152B05AA1100BA4D22 /* ContentView.swift */,
 				73A9A2452B2A9D8200DF32BD /* GameOverView.swift */,
 				738207232B05AB2F00BA4D22 /* GameView.swift */,
@@ -197,23 +205,23 @@
 			path = "Audio Files";
 			sourceTree = "<group>";
 		};
-		73BD58752B085257006114B4 /* AudioManager */ = {
+		73BD58752B085257006114B4 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
 				73BD58762B08527F006114B4 /* AudioFile.swift */,
 				73BD58692B084FA5006114B4 /* AudioManager.swift */,
+				73BD58682B084F80006114B4 /* Audio Files */,
 			);
-			path = AudioManager;
+			path = Audio;
 			sourceTree = "<group>";
 		};
-		73BD58822B09A41D006114B4 /* LocalStore */ = {
+		73BD58822B09A41D006114B4 /* LocalStorage */ = {
 			isa = PBXGroup;
 			children = (
-				73AA54BF2B2CA16200277C5D /* ColorSchemeDataSource.swift */,
 				73BD58852B09A7B3006114B4 /* UserDefaultKeys.swift */,
 				73BD58832B09A448006114B4 /* UserDefaultsManager.swift */,
 			);
-			path = LocalStore;
+			path = LocalStorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,7 +309,7 @@
 				73BD58862B09A7B3006114B4 /* UserDefaultKeys.swift in Sources */,
 				73BD588A2B0D5B06006114B4 /* MainMenuView.swift in Sources */,
 				738207162B05AA1100BA4D22 /* ContentView.swift in Sources */,
-				73AA54C02B2CA16200277C5D /* ColorSchemeDataSource.swift in Sources */,
+				73AA54C02B2CA16200277C5D /* ColorSchemeData.swift in Sources */,
 				73BD586A2B084FA5006114B4 /* AudioManager.swift in Sources */,
 				73AA54BE2B2CA0B700277C5D /* ColorSchemeModel.swift in Sources */,
 				73A465552B07E2880084FCDC /* GameTile.swift in Sources */,

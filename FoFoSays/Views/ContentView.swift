@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @StateObject var gameLogic = GameLogic()
+    private let gameLogic = GameLogic()
     
     var body: some View {
         RootView()
