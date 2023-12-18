@@ -29,10 +29,28 @@
         }
       }
     },
+    "Arctic Sunrise" : {
+
+    },
     "Back to Menu" : {
 
     },
+    "Beachgoer" : {
+
+    },
+    "Brew" : {
+
+    },
+    "Bubble Gum" : {
+
+    },
+    "Classic" : {
+
+    },
     "Color Scheme" : {
+
+    },
+    "Cool Blues" : {
 
     },
     "FoFo Says" : {
@@ -41,7 +59,16 @@
     "Game Over" : {
 
     },
+    "Hazy" : {
+
+    },
     "High Score:" : {
+
+    },
+    "High-Impact" : {
+
+    },
+    "Ice Cap" : {
 
     },
     "Play" : {
@@ -50,10 +77,25 @@
     "Play Again" : {
 
     },
+    "Professional" : {
+
+    },
     "Round" : {
 
     },
     "Score: %lld" : {
+
+    },
+    "Sea Breeze" : {
+
+    },
+    "Shadowy" : {
+
+    },
+    "Smokey" : {
+
+    },
+    "Sunset" : {
 
     }
   },
