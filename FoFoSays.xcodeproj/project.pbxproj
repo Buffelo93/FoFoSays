@@ -39,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D37BF3F2B30ED3C0041537C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		731E84402B2D1760001E2BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FoFoSays/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		731E84422B2D186B001E2BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		731E84432B2D324D001E2BF7 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 			children = (
 				731E84422B2D186B001E2BF7 /* Info.plist */,
 				738207132B05AA1100BA4D22 /* FoFoSaysApp.swift */,
+				2D37BF3F2B30ED3C0041537C /* PrivacyInfo.xcprivacy */,
 				73BD58872B0D5AA6006114B4 /* Localizable.xcstrings */,
 				73BD58652B0815BF006114B4 /* Assets */,
 				73BD58752B085257006114B4 /* Audio */,
