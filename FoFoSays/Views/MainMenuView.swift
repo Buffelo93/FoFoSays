@@ -48,7 +48,7 @@ struct MainMenuView: View {
                     }
                     .imageScale(.large)
                     .frame(width: 50, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    .padding()
+                    .padding(EdgeInsets(top: -10, leading: 0, bottom: 0, trailing: 0))
                     Spacer()
                 }
         }
