@@ -37,6 +37,7 @@ struct ColorsSheetView: View {
 
 #Preview {
     ColorsSheetView(colorsSheetViewModel: ColorsSheetViewModel(gameLogic: GameLogic()))
+        .preferredColorScheme(.dark)
 }
 
 struct ColorSelectionsView: View {
@@ -65,7 +66,7 @@ struct ColorSelectionsView: View {
                 Text(colorSchemeTitle)
                     .font(.title)
                     .fontWeight(.ultraLight)
-                    .foregroundStyle(.black)
+                    .foregroundStyle(.white)
                 ZStack {
                     HStack {
                         Rectangle()
