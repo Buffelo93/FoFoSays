@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AudioToolbox
 
 final class GameLogic: ObservableObject {
     
@@ -94,6 +95,7 @@ final class GameLogic: ObservableObject {
         } else {
             audioManager.play(audioFile: .incorrect)
             textIsRed = true
+            if soundIsOn { AudioServicesPlaySystemSound(kSystemSoundID_Vibrate) }
             incorrectAnimation(with: index) {
                 withAnimation(self.transitionAnimation) {
                     self.isGameOver = true
